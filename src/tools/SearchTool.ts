@@ -2,9 +2,11 @@ import { MCPTool } from "mcp-framework";
 import { z } from "zod";
 import axios from 'axios';
 
-const config = require("/home/user/mount/datadisk/Michael/Local_Agent/inputs/Google_Custom_Search_API.json")
-const API_KEY = config.GOOGLE_API_KEY;
-const SEARCH_ENGINE_ID = config.GOOGLE_SEARCH_ENGINE_ID;
+import dotenv from 'dotenv';
+dotenv.config();
+
+const API_KEY = process.env.GOOGLE_API_KEY as string;
+const SEARCH_ENGINE_ID = process.env.GOOGLE_SEARCH_ENGINE_ID as string;
 
 interface SearchInput {
   query: string;
