@@ -5,8 +5,8 @@ import axios from 'axios';
 import dotenv from 'dotenv';
 dotenv.config();
 
-const API_KEY = process.env.GOOGLE_API_KEY as string;
-const SEARCH_ENGINE_ID = process.env.GOOGLE_SEARCH_ENGINE_ID as string;
+const API_KEY = process.env.GOOGLE_API_KEY!;
+const SEARCH_ENGINE_ID = process.env.GOOGLE_SEARCH_ENGINE_ID!;
 
 interface SearchInput {
   query: string;
