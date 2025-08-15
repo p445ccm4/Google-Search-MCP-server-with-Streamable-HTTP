@@ -5,11 +5,11 @@ import axios from 'axios';
 import dotenv from 'dotenv';
 dotenv.config();
 
-const API_KEY = process.env.GOOGLE_API_KEY!;
-const SEARCH_ENGINE_ID = process.env.GOOGLE_SEARCH_ENGINE_ID!;
+const API_KEY = process.env.API_KEY!;
+const SEARCH_ENGINE_ID = process.env.SEARCH_ENGINE_ID!;
 
 interface SearchInput {
-  query: string;
+  q: string;
   num: number;
 }
 
@@ -32,7 +32,7 @@ class SearchTool extends MCPTool<SearchInput> {
   description = "Perform a web search query";
 
   schema = {
-    query: {
+    q: {
       type: z.string(),
       description: "Search query",
     },
@@ -43,7 +43,7 @@ class SearchTool extends MCPTool<SearchInput> {
   };
 
   async execute(input: SearchInput) {
-    console.log(`Searching top ${input.num} results for query: ${input.query}`);
+    console.log(`Searching top ${input.num} results for query: ${input.q}`);
 
       try {
         const response = await axiosInstance.get('', {
