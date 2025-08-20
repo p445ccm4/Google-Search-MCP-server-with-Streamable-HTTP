@@ -26,6 +26,6 @@ COPY --from=build /app/dist ./dist
 COPY --from=build /app/package.json /app/package-lock.json ./
 
 # Expose the port your application listens on
-EXPOSE 3020
+EXPOSE 3030
 
 CMD ["npm", "run", "start"]
