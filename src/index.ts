@@ -1,6 +1,8 @@
+import * as dotenv from "dotenv";
 import { MCPServer } from "mcp-framework";
+dotenv.config();
 
-const PORT = Number(process.env.PORT) || 3020;
+const PORT = Number(process.env.PORT);
 
 const server = new MCPServer({
   transport: {
