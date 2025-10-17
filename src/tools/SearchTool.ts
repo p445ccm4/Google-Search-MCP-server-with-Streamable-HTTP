@@ -28,7 +28,7 @@ const axiosInstance = axios.create({
     });
 
 class SearchTool extends MCPTool<SearchInput> {
-  name = "Google Search";
+  name = "google_search";
   description = "Perform a web search query";
 
   schema = {

@@ -14,7 +14,7 @@ interface ReadWebpageResult {
 }
 
 class ReadWebpageTool extends MCPTool<ReadWebpageInput> {
-  name = "Read Webpage";
+  name = "read_webpage";
   description = "Fetch and extract text content from a webpage";
 
   schema = {
